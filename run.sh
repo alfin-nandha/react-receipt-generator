@@ -1,0 +1,1 @@
+sudo docker run -d --hostname kafkachips --name kafkachips -p 7000:3000 --restart=always kafkachips
