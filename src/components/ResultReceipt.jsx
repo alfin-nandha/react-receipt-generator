@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import bwipjs from 'bwip-js';
 
@@ -20,6 +20,7 @@ const ResultReceipt = () => {
                 includetext: false,            // Show human-readable text
             });
             document.getElementById('myimg').src = canvas.toDataURL('image/png');
+
         } catch (e) {
             console.log(e);
         }
@@ -67,7 +68,7 @@ const ResultReceipt = () => {
                 </div>
             </div>
             <button className="mx-auto mt-4 bg-slate-50 hover:bg-slate-100 border-slate-100 border-2 py-1 px-3 rounded-md" onClick={back}>
-                <span className="block">back / create new receipt</span>
+                <span className="block">Back / Create New Receipt</span>
             </button>
         </div>
     )
